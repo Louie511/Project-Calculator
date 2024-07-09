@@ -1,0 +1,304 @@
+@font-face {
+    font-family: 'CalculatorFont'; 
+    src: url('./Fonts/digital-7/digital-7.ttf'); /*URL to font*/
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-x: hidden;
+    background-color: #FFF2E1;
+}
+
+h1 {
+    font-family: Inter,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 70px;
+    margin-top: 5%;
+    color: #353935; 
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    
+    transition: opacity 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+}
+h1 a{
+    color: inherit;
+    text-decoration: none;
+}
+h1:hover {
+    opacity: 1.0;
+    transition: opacity 0.3s ease-in-out;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1.02);
+    opacity: 95%;
+    
+}
+
+
+.body{
+    box-sizing: border-box;
+    width: 15%;
+    background-color: #C7C8CC;
+    max-height: 100%;
+    height: 40%;
+    border-radius: 3%;
+    margin-bottom: 15%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    transition: transform 0.3s ease-in-out;
+}
+
+.body:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+
+.screen {
+    font-family: 'calculatorFont';
+    height: 30px;
+    margin: 20px 10px 5px 10px;
+    padding: 15px;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.textContent{
+    position: absolute;
+    font-size: 200%;
+}
+
+.screen{
+    background-color: #9CAFAA;
+}
+
+/* BUTTONS */
+
+#numPad {
+    background-color: #B4B4B8;
+    margin-top: 50px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 2%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; 
+}
+
+.clearRemoveBtn{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+button.clearBtn{
+    width: 47%;
+    height: 50px;
+    margin-left: 2.5%;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, 
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, 
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, 
+    rgba(0, 0, 0, 0.06) 0px 2px 1px, 
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, 
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, 
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, 
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+button.clearBtn:hover{
+    cursor: pointer;
+}
+button.deleteBtn {
+    width: 47%;
+    height: 50px;
+    margin-right: 2.5%;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, 
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, 
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, 
+    rgba(0, 0, 0, 0.06) 0px 2px 1px, 
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, 
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, 
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, 
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+button.deleteBtn:hover{
+    cursor: pointer;
+}
+
+.btnRows {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 10px;
+}
+
+.btnRows button {
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, 
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, 
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, 
+    rgba(0, 0, 0, 0.06) 0px 2px 1px, 
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, 
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, 
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, 
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.btnRows button:hover{
+    cursor: pointer;
+}
+
+.theFooter{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #E5DDC5;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    padding: 15px;
+    color: #353935;
+    opacity: 0.5;
+    transition: opacity 0.5s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+    font-family: Inter,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+.theFooter:hover {
+    opacity: 1.0;
+    cursor: pointer;  
+}
+
+.githubImage {
+    padding-left: 20px;
+}
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 2560px) and (max-height: 1080px) {
+    .body{
+        box-sizing: border-box;
+        width: 15%;
+        background-color: #C7C8CC;
+        max-height: 100%;
+        height: 75%;
+    }
+}
+
+@media (max-width: 1440px) {
+    .body{
+        box-sizing: border-box;
+        width: 21%;
+        background-color: #C7C8CC;
+        max-height: 100%;
+        height: 75%;
+    }
+    h1{
+        font-family: Inter,Helvetica Neue,Helvetica,Arial,sans-serif;
+        font-size: 40px;
+        margin-top: 15%;
+        color: #353935;
+    }
+}
+
+@media (max-width: 1024px) {
+    .body{
+        box-sizing: border-box;
+        width: 30%;
+        background-color: #C7C8CC;
+        max-height: 100%;
+        height: 75%;
+    }
+    h1{
+        font-family: Inter,Helvetica Neue,Helvetica,Arial,sans-serif;
+        font-size: 40px;
+        margin-top: 15%;
+        color: #353935;
+    }
+}
+
+@media (max-width: 768px) {
+    .body{
+        box-sizing: border-box;
+        width: 40%;
+        background-color: #C7C8CC;
+        max-height: 100%;
+        height: 75%;
+    }
+    h1{
+        font-family: Inter,Helvetica Neue,Helvetica,Arial,sans-serif;
+        font-size: 40px;
+        margin-top: 15%;
+        color: #353935;
+    }
+    
+}
+
+@media (max-width: 425px) and (max-height: 844px) {
+    .body{
+        box-sizing: border-box;
+        width: 70%;
+        background-color: #C7C8CC;
+        max-height: 100%;
+        height: 75%;
+    }
+    h1{
+        font-family: Inter,Helvetica Neue,Helvetica,Arial,sans-serif;
+        font-size: 30px;
+        margin-top: 15%;
+        color: #353935;
+    }
+    #footer{
+        display: none;
+    }
+}
+
+@media (max-width: 375px) and (max-height: 844px) {
+    .body{
+        box-sizing: border-box;
+        width: 80%;
+        background-color: #C7C8CC;
+        max-height: 100%;
+        height: 75%;
+    }
+    h1{
+        font-family: Inter,Helvetica Neue,Helvetica,Arial,sans-serif;
+        font-size: 30px;
+        margin-top: 15%;
+        color: #353935;
+    }
+    #footer{
+        display: none;
+    }
+}
+
+@media (max-width: 320px) and (max-height: 844px) {
+    .body{
+        box-sizing: border-box;
+        width: 80%;
+        background-color: #C7C8CC;
+        max-height: 100%;
+        height: 75%;
+    }
+    h1{
+        font-family: Inter,Helvetica Neue,Helvetica,Arial,sans-serif;
+        font-size: 30px;
+        margin-top: 15%;
+        color: #353935;
+    }
+    #footer{
+        display: none;
+    }
+}
+
+
+
